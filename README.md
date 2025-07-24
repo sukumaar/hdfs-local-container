@@ -1,6 +1,9 @@
 # hdfs-local-container
 HDFS local single node container for testing
-
+[![Docker Image](https://github.com/sukumaar/hdfs-local-container/actions/workflows/docker-image.yml/badge.svg)](https://github.com/sukumaar/hdfs-local-container/actions/workflows/docker-image.yml)
+![GitHub License](https://img.shields.io/github/license/sukumaar/hdfs-local-container?style=plastic)
+![Docker Pulls](https://img.shields.io/docker/pulls/sukumaar/hdfs-local?style=plastic&logo=docker)
+![Docker Image Size](https://img.shields.io/docker/image-size/sukumaar/hdfs-local?style=plastic&logo=docker)
 
 ## Local building and deployment
 ### Building image locally
