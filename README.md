@@ -6,28 +6,29 @@
 
 ## What it is?
 HDFS local single node container for testing
-## Local building and deployment
+## Building and deployment
 ### Building image locally
 ```bash
 $ git clone git@github.com:sukumaar/hdfs-local-container.git
 $ cd hdfs-local-container
-# using local-hdfs-1 as image name you can choose your own
-$ docker build -t local-hdfs-1 .
+# using hdfs-local as image name you can choose your own
+$ docker build -t hdfs-local .
+```
+### or
+## Docker pull
+```bash
+docker pull sukumaar/hdfs-local:latest
 ```
 
 ### Starting container
+- CONTAINER_NAME environment variable is required, it's value should be name of your container from your `docker run` command
 ```bash
-$ docker build -t local-hdfs-1 .
 $ docker run -e CONTAINER_NAME=namenode \
 -d --name namenode \ 
 -p 9000:9000 -p 9870:9870  -p 9866:9866 -p 9864:9864 -p 9867:9867 \ 
---replace local-hdfs-1
+--replace hdfs-local
 ```
 
-## Dockerhub pull and deployment
-```bash
-
-```
 
 ### CLI Usage
 ```bash
