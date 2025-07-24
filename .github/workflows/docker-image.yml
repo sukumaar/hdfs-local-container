@@ -4,10 +4,6 @@ on:
   release:
     types: [published]
 
-env:
-  DOCKER_REPO: sukumaar
-  DOCKER_IMAGE: hdfs-local
-
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -37,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: $DOCKER_REPO/$DOCKER_IMAGE
+          images: sukumaar/hdfs-local
 
       - name: Build and push Docker image
         id: push
@@ -53,6 +49,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: index.docker.io/$DOCKER_REPO/$DOCKER_IMAGE
+          subject-name: index.docker.io/sukumaar/hdfs-local
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
