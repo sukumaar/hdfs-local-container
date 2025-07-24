@@ -23,5 +23,3 @@ xmlstarlet ed \
 service ssh start
 su - hadoop -s /bin/bash -c 'echo "This is $HOSTNAME"; echo "source /etc/profile" >> ~/.bashrc; hdfs namenode -format; start-dfs.sh; hdfs dfs -mkdir -p /user/hadoop; hdfs dfs -ls /;'
 tail -f /dev/null
-
-
